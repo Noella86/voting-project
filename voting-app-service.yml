@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: service
+metadata:
+  name: voting-app-service
+  labels:
+    name: voting-app-service
+  author: nene
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 80
+      port: 80
+  selector:
+    name: voting-app-pod
+    author: nene
+...
